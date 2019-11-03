@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Safetor Teams Microservice
+  profiles:
+    active: @spring.profiles.active@
