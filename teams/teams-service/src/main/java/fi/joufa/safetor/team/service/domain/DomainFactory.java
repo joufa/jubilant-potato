@@ -1,4 +1,4 @@
-package java.fi.joufa.safetor.team.service.domain;
+package fi.joufa.safetor.team.service.domain;
 
 import fi.joufa.safetor.teams.domain.Team;
 import fi.joufa.safetor.teams.domain.TeamId;

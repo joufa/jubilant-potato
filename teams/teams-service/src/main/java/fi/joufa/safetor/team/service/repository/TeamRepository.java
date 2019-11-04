@@ -1,6 +1,6 @@
-package java.fi.joufa.safetor.team.service.repository;
+package fi.joufa.safetor.team.service.repository;
 
-import java.fi.joufa.safetor.team.service.entity.TeamEntity;
+import fi.joufa.safetor.team.service.entity.TeamEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

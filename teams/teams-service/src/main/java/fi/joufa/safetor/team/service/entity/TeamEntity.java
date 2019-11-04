@@ -1,4 +1,4 @@
-package java.fi.joufa.safetor.team.service.entity;
+package fi.joufa.safetor.team.service.entity;
 
 import java.util.Objects;
 import javax.persistence.*;

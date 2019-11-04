@@ -1,4 +1,4 @@
-package java.fi.joufa.safetor.team.service;
+package fi.joufa.safetor.team.service;
 
 import java.util.Arrays;
 import java.util.Collection;

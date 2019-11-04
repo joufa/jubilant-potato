@@ -1,7 +1,7 @@
 logging:
   level:
-    fi.joufa.safetor: DEBUG
-    web: DEBUG
+    ROOT: debug
+    fi.joufa.safetor: debug
 
 spring:
   profiles:

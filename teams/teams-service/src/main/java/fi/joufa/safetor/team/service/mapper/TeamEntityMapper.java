@@ -1,8 +1,8 @@
-package java.fi.joufa.safetor.team.service.mapper;
+package fi.joufa.safetor.team.service.mapper;
 
+import fi.joufa.safetor.team.service.entity.TeamEntity;
 import fi.joufa.safetor.teams.domain.Team;
 import fi.joufa.safetor.teams.domain.TeamId;
-import java.fi.joufa.safetor.team.service.entity.TeamEntity;
 import org.springframework.stereotype.Component;
 
 @Component

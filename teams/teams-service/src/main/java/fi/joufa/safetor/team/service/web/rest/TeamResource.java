@@ -1,8 +1,8 @@
-package java.fi.joufa.safetor.team.service.web.rest;
+package fi.joufa.safetor.team.service.web.rest;
 
-import java.fi.joufa.safetor.team.service.mapper.TeamEntityMapper;
-import java.fi.joufa.safetor.team.service.mapper.TeamVmMapper;
-import java.fi.joufa.safetor.team.service.repository.TeamRepository;
+import fi.joufa.safetor.team.service.mapper.TeamEntityMapper;
+import fi.joufa.safetor.team.service.mapper.TeamVmMapper;
+import fi.joufa.safetor.team.service.repository.TeamRepository;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;

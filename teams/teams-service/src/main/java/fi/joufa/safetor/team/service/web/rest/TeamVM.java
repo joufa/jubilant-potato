@@ -1,4 +1,4 @@
-package java.fi.joufa.safetor.team.service.web.rest;
+package fi.joufa.safetor.team.service.web.rest;
 
 import javax.validation.constraints.NotNull;
 

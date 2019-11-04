@@ -1,4 +1,4 @@
-package java.fi.joufa.safetor.team.service.config;
+package fi.joufa.safetor.team.service.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
