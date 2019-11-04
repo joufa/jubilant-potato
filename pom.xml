@@ -21,6 +21,14 @@
         <fmt.maven.plugin.version>2.9</fmt.maven.plugin.version>
         <spring-boot.version>2.2.0.RELEASE</spring-boot.version>
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
+        <liquibase.version>3.6.3</liquibase.version>
+        <liquibase-hibernate5.version>3.6</liquibase-hibernate5.version>
+        <hibernate-core.version>5.3.8.Final</hibernate-core.version>
+        <javassist.version>3.23.2-GA</javassist.version>
+        <validation-api.version>2.0.1.Final</validation-api.version>
+        <h2.version>1.4.199</h2.version>
+        <spring.version>5.2.0.RELEASE</spring.version>
+        <archunit-junit5.version>0.11.0</archunit-junit5.version>
     </properties>
 
     <dependencyManagement>
@@ -42,6 +50,23 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
                 <version>5.2.0.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-core</artifactId>
+                <version>${liquibase.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tngtech.archunit</groupId>
+                <artifactId>archunit-junit5-api</artifactId>
+                <version>${archunit-junit5.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.tngtech.archunit</groupId>
+                <artifactId>archunit-junit5-engine</artifactId>
+                <version>${archunit-junit5.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -71,6 +96,11 @@
                             </goals>
                         </execution>
                     </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.liquibase</groupId>
+                    <artifactId>liquibase-maven-plugin</artifactId>
+                    <version>${liquibase.version}</version>
                 </plugin>
 
             </plugins>

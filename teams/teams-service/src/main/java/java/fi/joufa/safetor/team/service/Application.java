@@ -1,14 +1,13 @@
-package fi.joufa.safetor.team.service;
+package java.fi.joufa.safetor.team.service;
 
+import java.util.Arrays;
+import java.util.Collection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
-
-import java.util.Arrays;
-import java.util.Collection;
 
 @SpringBootApplication
 public class Application implements InitializingBean {
@@ -35,7 +34,5 @@ public class Application implements InitializingBean {
     }
   }
 
-  private static void logStartup(Environment environment) {
-
-  }
+  private static void logStartup(Environment environment) {}
 }

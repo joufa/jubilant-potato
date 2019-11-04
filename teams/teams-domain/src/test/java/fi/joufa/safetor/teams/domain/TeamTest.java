@@ -11,6 +11,11 @@ class TeamTest {
     public void createNewTeam() {
         final Team team = new Team(new TeamId(Long.valueOf(1)), "Test team");
         assertEquals("Test team", team.getName());
+    }
+
+    @Test
+    public void createNullTeam() {
+        final Team team = new Team(new TeamId(null), "Test");
 
     }
 }
