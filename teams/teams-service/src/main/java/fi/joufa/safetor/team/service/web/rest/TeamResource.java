@@ -43,11 +43,7 @@ public class TeamResource {
       throws URISyntaxException {
     log.debug("REST request to create a team : {}", teamVM);
     final TeamVM createdTeam =
-        teamVmMapper.toVM(
-            teamEntityMapper.teamEntityToTeam(
-                teamRepository.save(
-                    teamEntityMapper.teamToTeamEntity(teamVmMapper.toTeam(teamVM)))));
-
-    return ResponseEntity.created(new URI("/api/teams" + createdTeam.getId())).body(createdTeam);
+        teamEntityMapper.entityToVm(teamRepository.save(teamEntityMapper.vmToEntity(teamVM)));
+    return ResponseEntity.created(new URI("/api/teams/" + createdTeam.getId())).body(createdTeam);
   }
 }
