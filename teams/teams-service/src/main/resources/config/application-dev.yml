@@ -1,6 +1,6 @@
 logging:
   level:
-    ROOT: info
+    ROOT: DEBUG
     fi.joufa.safetor: debug
 
 spring:

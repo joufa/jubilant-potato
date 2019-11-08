@@ -12,7 +12,7 @@ public class TeamEntity {
   private Long id;
 
   @NotNull
-  @Column(name = "name")
+  @Column(name = "name", unique = true)
   private String name;
 
   public Long getId() {
