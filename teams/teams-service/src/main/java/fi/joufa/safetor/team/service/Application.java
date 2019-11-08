@@ -28,7 +28,6 @@ public class Application implements InitializingBean {
     SpringApplication app = new SpringApplication(Application.class);
     DefaultProfileUtil.addDefaultProfile(app);
     Environment env = app.run(args).getEnvironment();
-    logStartup(env);
   }
 
   @Override
@@ -38,6 +37,4 @@ public class Application implements InitializingBean {
       log.error("Profiles 'dev' and 'prod' active at the same time ");
     }
   }
-
-  private static void logStartup(Environment environment) {}
 }

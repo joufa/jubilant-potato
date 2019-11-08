@@ -1,7 +1,6 @@
 package fi.joufa.safetor.team.service.web.rest;
 
 import fi.joufa.safetor.team.service.mapper.TeamEntityMapper;
-import fi.joufa.safetor.team.service.mapper.TeamVmMapper;
 import fi.joufa.safetor.team.service.repository.TeamRepository;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -21,20 +20,16 @@ public class TeamResource {
 
   private TeamRepository teamRepository;
   private TeamEntityMapper teamEntityMapper;
-  private TeamVmMapper teamVmMapper;
 
-  public TeamResource(
-      TeamRepository teamRepository, TeamEntityMapper teamEntityMapper, TeamVmMapper teamVmMapper) {
+  public TeamResource(TeamRepository teamRepository, TeamEntityMapper teamEntityMapper) {
     this.teamRepository = teamRepository;
     this.teamEntityMapper = teamEntityMapper;
-    this.teamVmMapper = teamVmMapper;
   }
 
   @GetMapping("/teams")
   public List<TeamVM> getAllTeams() {
     return teamRepository.findAll().stream()
-        .map(teamEntityMapper::teamEntityToTeam)
-        .map(teamVmMapper::toVM)
+        .map(teamEntityMapper::entityToVm)
         .collect(Collectors.toList());
   }
 

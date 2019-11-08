@@ -7,7 +7,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import fi.joufa.safetor.team.service.Application;
 import fi.joufa.safetor.team.service.entity.TeamEntity;
 import fi.joufa.safetor.team.service.mapper.TeamEntityMapper;
-import fi.joufa.safetor.team.service.mapper.TeamVmMapper;
 import fi.joufa.safetor.team.service.repository.TeamRepository;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,8 +26,6 @@ public class TeamResourceIT {
 
   @Autowired private TeamRepository teamRepository;
 
-  @Autowired private TeamVmMapper teamVmMapper;
-
   @Autowired private TeamEntityMapper teamEntityMapper;
 
   private MockMvc mvc;
@@ -36,15 +33,8 @@ public class TeamResourceIT {
   @BeforeEach
   public void setup() {
     MockitoAnnotations.initMocks(this);
-    final TeamResource teamResource =
-        new TeamResource(teamRepository, teamEntityMapper, teamVmMapper);
+    final TeamResource teamResource = new TeamResource(teamRepository, teamEntityMapper);
     this.mvc = MockMvcBuilders.standaloneSetup(teamResource).build();
-  }
-
-  public static TeamEntity createEntity() {
-    TeamEntity teamEntity = new TeamEntity();
-    teamEntity.setName(TEST_TEAM_NAME);
-    return teamEntity;
   }
 
   public static TeamVM createVM() {
