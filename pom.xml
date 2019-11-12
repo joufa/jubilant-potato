@@ -29,9 +29,31 @@
         <validation-api.version>2.0.1.Final</validation-api.version>
         <h2.version>1.4.199</h2.version>
         <spring.version>5.2.0.RELEASE</spring.version>
-        <spring.cloud.version>Greenwich.SR3</spring.cloud.version>
+        <spring.cloud.version>Hoxton.M3</spring.cloud.version>
         <archunit-junit5.version>0.11.0</archunit-junit5.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
 
     <dependencyManagement>
         <dependencies>
@@ -126,11 +148,6 @@
                 <spring.profiles.active>dev</spring.profiles.active>
             </properties>
             <dependencies>
-                <dependency>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-devtools</artifactId>
-                    <optional>true</optional>
-                </dependency>
                 <dependency>
                     <groupId>com.h2database</groupId>
                     <artifactId>h2</artifactId>

@@ -3,6 +3,7 @@ server:
 
 eureka:
   client:
+    prefer-ip-address: true
     registryFetchIntervalSeconds: 5
     registerWithEureka: false
     serviceUrl:
@@ -13,6 +14,7 @@ eureka:
 management:
   security:
     enabled: false
+
 spring:
   boot:
     admin:
