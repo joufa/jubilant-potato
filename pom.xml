@@ -21,7 +21,7 @@
         <fmt.maven.plugin.version>2.9</fmt.maven.plugin.version>
         <spring-boot.version>2.2.0.RELEASE</spring-boot.version>
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
-        <liquibase.version>3.6.3</liquibase.version>
+        <liquibase.version>4.8.0</liquibase.version>
         <liquibase-hibernate5.version>3.6</liquibase-hibernate5.version>
         <hibernate-core.version>5.3.8.Final</hibernate-core.version>
         <javassist.version>3.23.2-GA</javassist.version>
